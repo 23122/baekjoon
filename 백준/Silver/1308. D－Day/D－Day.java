@@ -15,10 +15,10 @@ public class Main {
 
         long result = ChronoUnit.DAYS.between(now,target);
 
-        if(now.plusYears(1000).isBefore(target) || now.plusYears(1000).isEqual(target)){
-            bw.write("gg");
-        }else{
+        if(now.plusYears(1000).compareTo(target) > 0){
             bw.write("D-"+result);
+        }else{
+            bw.write("gg");
         }
         bw.flush();
         bw.close();
