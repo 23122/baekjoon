@@ -36,19 +36,12 @@ public class Main {
 
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
-                if (i % 2 == 0) {
-                    if (j % 2 == 0) {
-                        target[i][j] = 'W';
-                    } else {
-                        target[i][j] = 'B';
-                    }
+                if (j % 2 == 0) {
+                    target[i][j] = i % 2 == 0 ? 'W' : 'B';
                 } else {
-                    if (j % 2 == 0) {
-                        target[i][j] = 'B';
-                    } else {
-                        target[i][j] = 'W';
-                    }
+                    target[i][j] = i % 2 == 0 ? 'B' : 'W';
                 }
+                
                 if(target[i][j] == input[n+i][m+j]){
                     result++;
                 }
