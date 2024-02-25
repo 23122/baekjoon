@@ -31,19 +31,18 @@ public class Main {
     }
 
     private static int chk(char[][] input, int n, int m) {
-        char[][] target = new char[8][8];
-        int      result = 0;
+        int result = 0;
 
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
                 if (j % 2 == 0) {
-                    target[i][j] = i % 2 == 0 ? 'W' : 'B';
+                    if(input[n+i][m+j] == (i % 2 == 0 ? 'W' : 'B')){
+                        result++;
+                    }
                 } else {
-                    target[i][j] = i % 2 == 0 ? 'B' : 'W';
-                }
-                
-                if(target[i][j] == input[n+i][m+j]){
-                    result++;
+                    if(input[n+i][m+j] == (i % 2 == 0 ? 'B' : 'W')){
+                        result++;
+                    }
                 }
             }
         }
