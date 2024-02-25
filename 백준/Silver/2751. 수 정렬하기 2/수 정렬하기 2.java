@@ -12,17 +12,15 @@ public class Main {
         for(int j = 0 ; j < cnt ; j++){
             i[j] = Integer.parseInt(br.readLine());
         }
+        br.close();
 
         Arrays.sort(i);
 
-        Arrays.stream(i).forEach(num -> {
-            try {
-                bw.write(String.valueOf(num));
-                bw.newLine();
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        });
+        StringBuilder result = new StringBuilder();
+        for (int num : i) {
+            result.append(num).append('\n');
+        }
+        bw.write(result.toString());
 
         bw.flush();
         bw.close();
