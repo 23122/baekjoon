@@ -7,7 +7,7 @@ public class Main {
 
         String[] list = br.readLine().split(" ");
 
-        int[] min = new int[2];
+        int[] min = new int[list.length / 2];
 
         for(int i = 0 ; i < list.length / 2 ; i++){
             int n = Integer.parseInt(list[i]);
