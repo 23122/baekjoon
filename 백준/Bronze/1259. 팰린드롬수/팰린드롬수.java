@@ -15,6 +15,7 @@ public class Main {
             for(int i = 0 ; i <= line.length / 2 ; i++){
                 if(line[i] != line[line.length - 1 - i]){
                     result = "no";
+                    break;
                 }
             }
             bw.write(result);
