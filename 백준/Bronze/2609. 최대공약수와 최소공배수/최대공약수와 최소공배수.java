@@ -11,9 +11,10 @@ public class Main {
         int      max  = 0;
         int      min  = Math.max(n,m);
 
-        for(int i = 1 ; i <= Math.min(n,m) ; i++){
+        for(int i = Math.min(n,m) ; i > 0  ; i--){
             if(n % i == 0 && m % i == 0){
                 max = i;
+                break;
             }
         }
 
