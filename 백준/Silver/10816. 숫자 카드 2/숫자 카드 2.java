@@ -1,5 +1,4 @@
 import java.io.*;
-import java.util.HashMap;
 import java.util.StringTokenizer;
 
 public class Main {
@@ -7,22 +6,22 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        HashMap<Integer, Integer> cardMap = new HashMap<>();
+        int[] cardCount = new int[20000001];
 
         br.readLine();
 
         StringTokenizer st = new StringTokenizer(br.readLine());
         while (st.hasMoreTokens()) {
             int num = Integer.parseInt(st.nextToken());
-            cardMap.put(num, cardMap.getOrDefault(num, 0) + 1);
+            cardCount[num + 10000000]++;
         }
 
         br.readLine();
-        
+
         st = new StringTokenizer(br.readLine());
         while (st.hasMoreTokens()) {
             int num = Integer.parseInt(st.nextToken());
-            bw.write(cardMap.getOrDefault(num, 0) + " ");
+            bw.write(cardCount[num + 10000000] + " ");
         }
 
         br.close();
