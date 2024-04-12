@@ -1,19 +1,25 @@
-import java.util.Scanner;
+import java.io.*;
 
 public class Main {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int N = scanner.nextInt();
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        int N = Integer.parseInt(br.readLine());
         int count = 1;
         int range = 1;
         int increment = 6;
         
         while (N > range) {
-            count++; 
+            count++;
             range += increment;
             increment += 6;
         }
-        
-        System.out.println(count);
+
+        bw.write(String.valueOf(count));
+
+        bw.flush();
+        br.close();
+        bw.close();
     }
 }
