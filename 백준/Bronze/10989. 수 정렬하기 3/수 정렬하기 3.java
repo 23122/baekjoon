@@ -1,7 +1,4 @@
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -18,8 +15,8 @@ public class Main {
 
         for (int i = 0 ; i < list.length ; i++) {
             int num = list[i];
-            for (int j = 0 ; j < num ; j++){
-                sb.append(i).append("\n");
+            if(num > 0){
+                sb.append((i + "\n").repeat(num));
             }
         }
 
