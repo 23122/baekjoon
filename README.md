@@ -1,2 +1,2 @@
-# baekjoon
-This is an auto push repository for Baekjoon Online Judge created with [BaekjoonHub](https://github.com/BaekjoonHub/BaekjoonHub).
+# 1일 1코딩테스트 챌린지
+목표 : `class 4` `Gold 1`
